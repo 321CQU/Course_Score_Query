@@ -1,0 +1,7 @@
+aiomysql==0.1.1
+grpcio==1.51.3
+grpcio-tools==1.51.3
+protobuf==4.22.0
+pydantic==1.10.5
+PyMySQL==1.0.2
+typing_extensions==4.5.0
