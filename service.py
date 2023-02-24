@@ -63,6 +63,6 @@ class CourseScoreQuery(csq_grpc.CourseScoreQueryServicer):
                     else:
                         result[detail['tname']] = [detail['detail']]
         return csq_model.FetchLayeredScoreDetailResponse(
-            course_name=res2[0][1], course_code=request.course_code,
+            course_name=(res2[0][1] if len(res2) > 0 else ''), course_code=request.course_code,
             score_details=map(lambda item: csq_model.LayeredScoreDetail(teacher_name=item[0], details=item[1]),
                               result.items()))
